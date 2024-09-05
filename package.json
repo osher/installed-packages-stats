@@ -1,11 +1,11 @@
 {
   "name": "whats-in-my-deps",
-  "version": "0.8.0",
+  "version": "0.8.2",
   "description": "a cli tool that takes a wiff on your node_modules and spits some stats about it",
   "keywords": ["esm", "mjs", "cjs", "statistics", "esm adoption", "es-modules", "commonjs", "node_modules"],
   "main": "lib/index.mjs",
   "bin": {
-    "stat-my-deps": "bin/cli.mjs"
+    "whats-in-my-deps": "bin/cli.mjs"
   },
   "scripts": {
     "test": "node --test --experimental-test-coverage"
