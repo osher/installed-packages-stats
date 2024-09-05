@@ -1,12 +1,20 @@
 {
-  "name": "installed-packages-stats",
+  "name": "stat-my-deps",
   "version": "0.6.0",
-  "main": "index.js",
+  "bin": {
+    "stat-my-deps": "bin/cli.mjs"
+  },
+  "main": "lib/index.mjs",
+  "files": [
+    "lib",
+    "bin"
+  ],
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "bin": "bin"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test --experimental-test-coverage"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +22,9 @@
   "description": "",
   "dependencies": {
     "glob": "^11.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osher/stat-my-deps.git"
   }
 }
