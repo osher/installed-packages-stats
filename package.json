@@ -1,6 +1,6 @@
 {
   "name": "whats-in-my-deps",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "a cli tool that takes a wiff on your node_modules and spits some stats about it",
   "keywords": ["esm", "mjs", "cjs", "statistics", "esm adoption", "es-modules", "commonjs", "node_modules"],
   "main": "lib/index.mjs",
