@@ -46,11 +46,21 @@ describe("e2e", () => {
     it('should end with error', () => assert(ctx.err));
     it('should state that the directory has no packages', () => assert(String(ctx.err.stdout).startsWith('ERR_NO_PACAKGES:')));
   });
+
+  describe("run with providing a path", () => {
+    const ctx = setupCase({
+      cmd: `node bin/cli.mjs test/fx`,
+    });
+
+    it('should not fail', () => assert.ifError(ctx.err));
+  });
 });
 
-function setupCase({cmd, env = {}}) {
+function setupCase({before: beforeHook, cmd, env = {}, dir = process.cwd()}) {
   const ctx = {};
-  before(() => promisify(exec)(cmd, { env: { ...process.env, ...env }})
+  before(() =>
+    Promise.resolve()
+    .then(() => promisify(exec)(cmd, { cwd: dir, env: { ...process.env, ...env }}))
     .then(({stderr, stdout}) => {
       ctx.stderr = stderr;
       ctx.stdout = stdout;

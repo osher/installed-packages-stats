@@ -8,6 +8,7 @@
     "whats-in-my-deps": "bin/cli.mjs"
   },
   "scripts": {
+    "pretest": "cd tests/fx && npm i",
     "test": "node --test --experimental-test-coverage"
   },
   "files": [
