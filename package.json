@@ -1,10 +1,15 @@
 {
-  "name": "stat-my-deps",
+  "name": "whats-in-my-deps",
   "version": "0.8.0",
+  "description": "a cli tool that takes a wiff on your node_modules and spits some stats about it",
+  "keywords": ["esm", "mjs", "cjs", "statistics", "esm adoption", "es-modules", "commonjs", "node_modules"],
+  "main": "lib/index.mjs",
   "bin": {
     "stat-my-deps": "bin/cli.mjs"
   },
-  "main": "lib/index.mjs",
+  "scripts": {
+    "test": "node --test --experimental-test-coverage"
+  },
   "files": [
     "lib",
     "bin"
@@ -13,18 +18,16 @@
     "lib": "lib",
     "bin": "bin"
   },
-  "scripts": {
-    "test": "node --test --experimental-test-coverage"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "glob": "^11.0.0"
   },
+  "license": "ISC",
+  "author": "Osher E<osher.filter@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/osher/stat-my-deps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/osher/whats-in-my-deps/issues"
   }
 }

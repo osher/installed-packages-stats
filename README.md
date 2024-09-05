@@ -1,10 +1,10 @@
-# Statistics for my Dependencies (`stat-my-deps`)
+# What's in my deps? statistics for your installed modules.
 
 This is a simple CLI tool that takes a whiff of your `node_modules` and spits out some statistics about them.
 
 # usage: 
 ```sh
-npx stat-my-deps
+npx whats-in-my-deps
 ```
 
 Expect output that ends like so:
