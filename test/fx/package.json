@@ -10,9 +10,13 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@jest/types": "^29.6.3",
     "@swc/core": "^1.7.23",
     "@tsconfig/node20": "^20.1.4",
+    "@types/retry": "^0.12.5",
+    "browserslist": "^4.23.3",
     "classnames": "^2.5.1",
+    "eslint-module-utils": "^2.11.0",
     "fs": "^0.0.1-security",
     "language-subtag-registry": "^0.3.23",
     "type-fest": "^4.26.0"
