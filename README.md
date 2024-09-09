@@ -48,4 +48,21 @@ npx stat-my-deps ~/workspace/my-project
 * `ESM` - the shipped code in the package was identified as ES-Modules.
 * `Dual` - the package includes an `exports` clause. (this is a naive assumption that may be refined in a PR)
 * `Types` - the package is identified as a types package.
-* `misc.` - the package does not ship JS code, but `.node`, `.json`, local-arch binaries or other miscellaneous files. 
+* `misc.` - the package does not ship JS code, but `.node`, `.json`, local-arch binaries or other miscellaneous files.
+
+# Contribute a data point
+
+This package was published as a part of a research about ESM adoption.
+
+If you would like to contribute a data-point to the research - you can submit your summary and stats in [this google-form](https://docs.google.com/forms/d/1ibF50XeZbcNMA2eRWdl1RdfRUGa7LcDivdOI1oG5Uv4).
+
+# Contribute to the project
+
+Gladly. The project uses test and coverage tools built in nodejs, and as such, it is developed with rather recent node versions (>=20).
+(However, it should run on all node versions of LTS or later).
+
+If you found a bug, would like to make an improvement, or have any ideas - go ahead!
+
+# Lisence
+
+ISC.
