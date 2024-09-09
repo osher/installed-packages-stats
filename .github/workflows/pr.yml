@@ -1,0 +1,48 @@
+name: Pull Request
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  test-coverage:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        NODE_VERSION:
+          - 22
+          - 20
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.NODE_VERSION }}
+
+      - name: install dependencies
+        shell: sh
+        run: npm install
+
+      - name: coverage report for NODE_VERSION - ${{ matrix.NODE_VERSION }}
+        shell: sh
+        run: npm run lcov
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          compare-ref: main
+          file: ./test.lcov
+          parallel: true
+          flag-name: node-${{ join(matrix.*, '-') }}
+
+  end:
+    needs: [test-coverage]
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Coveralls Finished
+      uses: coverallsapp/github-action@v2
+      with:
+        parallel-finished: true
+        carryforward: node-20,node-22

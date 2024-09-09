@@ -8,8 +8,10 @@
     "whats-in-my-deps": "bin/cli.mjs"
   },
   "scripts": {
-    "pretest": "cd tests/fx && npm i",
-    "test": "node --test --experimental-test-coverage"
+    "pretest": "cd test/fx && npm i",
+    "test": "node --test --experimental-test-coverage",
+    "prelcov": "cd test/fx && npm i",
+    "lcov": "npm t -- --test-reporter=lcov --test-reporter-destination=test.lcov"
   },
   "files": [
     "lib",
